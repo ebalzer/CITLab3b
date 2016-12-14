@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OSSARG Home</title>
+        <link href = 'style.css' type = 'text/css' rel = 'stylesheet'/>
+        <style>
+            #Checkerout{
+            position: fixed;
+            left: -1000vw;
+        }
+        </style>
+    </head>
+    
+    <body id=body>
+        
+        <div id = 'display'>
+            
+        <div id = 'head'>
+            <div id = icontop>
+                <div id= icon></div>
+                <div id= cart></div>
+            </div>
+            <div id=buttonbar>
+            <a href = 'Home.html'>
+            <button id= homebut class= buttons>Home</button>
+                </a>
+            <a href = 'Product.html'>
+            <button id= productbut class= buttons>Product</button>
+                </a>
+            <a href = 'Software.html'>
+            <button id= softbut class= buttons>Software</button>
+                </a>
+            <a href = 'aboutus.html'>
+            <button id= aboutbut class= buttons>About Us</button>
+                </a>
+            <h2 id=phonenum>Call Us at: 604-444-4566</h2>
+            </div>
+        </div>
+        <div id=bigbad>
+      
+        </div>
+        <div id = 'base'>
+        <div id = 'Title'><h3>Welcome to OSSARG</h3></div>
+        <div id = 'Slideshow'>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://images.discordapp.net/.eJwFwcsNwyAMANBdGICvqercO0dkEYtEgoCwe4q6e997zHc1s5lTdcrm3HFJGeuwomNRZVvHqI1pXmLL6I5UqZydbxUXAGLymAOiTxETgIs5A7w8YsYUEvh3cJ-9NhJh2ZX7bKRs513N7w-e1icb.dsT6t_krYh815CporT09k4QNGuQ?width=2000&height=1001" style="width:100%">
+  <div class="text">OSSARG</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://cdn.discordapp.com/attachments/144230951990329344/255450695392559105/Dev_version.png" style="width:100%">
+  <div class="text">DOSSARG</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://cdn.discordapp.com/attachments/227639314350080000/256494185245442061/L_glasses_template2.png" style="width:100%">
+  <div class="text">EOSSARG</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+
+        </div>
+        </div>    
+            
+        <div id = 'foot'>
+            <div id=bottombuttons>
+                <h2 id=info>We Accept: </h2>
+                <img id=master src="visa-mastercard.png">
+                <a href='Testimonial.html'>
+                <button id=testimonials>Testimonials</button>
+                </a>
+                <a href = 'FAQ.html'>
+                <button id=faq>F.A.Q.</button>
+                </a>
+            </div>
+        </div>
+            
+        </div>
+        <button id='Checkerout'></button>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src = 'webpj.js'></script>
+        <script>
+            var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+        </script>
+    </body>
+
+
+</html>

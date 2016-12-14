@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Midterm Exam
+        </title>
+    </head>
+    <style>
+        .pictures{
+            width: 100vw;
+            height: 25vh;
+        }
+        #middle{
+            width: 100vw;
+            height: 50vh;
+        }
+        .img{
+            width: 10vw;
+            height: 10vw;
+            border-radius: 10vw;
+            margin-right: 5vw;
+            border: 2px solid;
+        }
+        #bigpic{
+            width:25vw;
+            height: 50vh;
+            display: inline-block;
+            background-image: url(q.jpg);
+            background-size:25vw, 50vh;
+            background-image: center;
+            background-repeat: no-repeat;
+            margin-right: 5vw;
+        }
+        #text{
+            position: absolute;
+            display: inline-block;
+            width:50vw;
+            height: 50vh;
+            vertical-align: top;
+        }
+        #gear{
+            position:fixed;
+            top:10px;
+            right:10px;
+            width:20px;
+            height: 20px;
+        }
+        #gearbar{
+            position:fixed;
+            width:25vw;
+            height: 75vh;
+            right:-100vw;
+            top:10vh;
+            background-color: grey;
+            z-index: 1;
+            transition: 0.5s;
+        }
+        #newpics{
+            width:25vw;
+            height:10vw;
+            padding-top: 10vh;
+            padding-left: 2vw;
+            margin-bottom: 2vh;
+            margin-bottom: 2vh;
+        }
+        .newimg{
+            width:10vw;
+            height: 10vw;
+            display: inline-block;
+            border: 3px solid;
+        }
+        #entrybar{
+            position: relative;
+            width:25vw;
+            height: auto;
+            padding-left: 2vw;
+        }
+        #newtitle{
+            width:20vw;
+            height:3vh;
+            position: relative;
+            margin-bottom: 2vh;
+            border: 1px solid;
+        }
+        #newdes{
+            width:20vw;
+            height:3vh;
+            position: relative;
+            margin-bottom: 2vh;
+            border: 1px solid;
+        }
+        #cusimg{
+            width:10vw;
+            height: 5vh;
+            position: relative;
+            right:-10vw;
+            border: 1px solid;
+        }
+    </style>
+    <body id= 'body'>
+        <div id=gearbar>
+            <div id=newpics>
+                <img id=newimg1 class=newimg src="9.jpg">
+                <img id=newimg2 class=newimg src="10.jpg">
+            </div>
+            <div id=entrybar>
+                <input type="text" placeholder="Text input for title" id=newtitle />
+                <input type="text" placeholder="Text input for description" id=newdes />
+                <button id=cusimg>Custom Image</button>
+            </div>
+        </div>
+        <div id=topdiv class=pictures>
+            <img id=img1 class=img src='1.jpg';>
+            <img id=img2 class=img src='2.jpg';>
+            <img id=img3 class=img src='3.jpg';>
+            <img id=img4 class=img src='4.jpg';>
+            <img id=gear src="gear.png">
+        </div>
+        <div id=middle>
+            <div id=bigpic>
+            </div>
+            <div id=text><h1 id=title>Title for this image</h1>
+                <p id=description>Sample textSample textSample textSample text
+                Sample textSample textSample textSample textSample text
+                Sample textSample textSample textSample textSample text
+                Sample textSample textSample textSample textSample text
+                Sample textSample textSample textSample textSample text
+                </p>
+            </div>
+        </div>
+        <div id=bottomdiv class=pictures>
+            <img id=img5 class=img src='5.jpg';>
+            <img id=img6 class=img src='6.jpg';>
+            <img id=img7 class=img src='7.jpg';>
+            <img id=img8 class=img src='8.jpg';>
+        </div>
+        <script>
+            var entrybar= document.getElementById('entrybar')
+            var body= document.getElementById('body')
+            var topdiv= document.getElementById('topdiv')
+            var bottomdiv= document.getElementById('bottomdiv')
+            var image1 = document.getElementById('img1')
+            var image2 = document.getElementById('img2')
+            var image3 = document.getElementById('img3')
+            var image4 = document.getElementById('img4')
+            var image5 = document.getElementById('img5')
+            var image6 = document.getElementById('img6')
+            var image7 = document.getElementById('img7')
+            var image8 = document.getElementById('img8')
+            var bigback = document.getElementById('bigpic')
+            var textdis= document.getElementById('text')
+            var title= document.getElementById('title')
+            var gear= document.getElementById('gear')
+            var gearbar=document.getElementById('gearbar')
+            var description= document.getElementById('description')
+            var newimg1= document.getElementById('newimg1')
+            var newimg2= document.getElementById('newimg2')
+            var newtext= document.getElementById('newtitle')
+            var newdes= document.getElementById('newdes')
+            var cusbut= document.getElementById('cusimg')
+            
+            cusbut.onclick= function(){
+                var imglink=document.createElement('input');
+                entrybar.appendChild(imglink);
+                imglink.classname='newlink';
+                imglink.style.width='20vw';
+                imglink.style.height='2vh';
+                imglink.style.marginBottom='3vh';
+                imglink.style.border='1px solid';
+                imglink.attributes.type='link';
+                imglink.placholder="input image link";
+                
+                var addbutton= document.createElement('button')
+                entrybar.appendChild(addbutton);
+                addbutton.style.width='10vw';
+                addbutton.style.height='5vh';
+                addbutton.style.position='relative';
+                addbutton.style.right='-10vw';
+                addbutton.innerHTML='Create';
+                
+                addbutton.onclick = function(){
+                    bigback.style.backgroundImage='URL('+imglink.value+')';
+                    title.textContent=newtitle.value;
+                    description.textContent=newdes.value;
+                    gearbar.style.right='-100vw';
+                    var newpiccircle3=document.createElement('img');
+                    topdiv.appendChild(newpiccircle3);
+                    newpiccircle3.classname='img';
+                    newpiccircle3.src=imglink.value;
+                    newpiccircle3.style.borderRadius='10vw';
+                    newpiccircle3.style.width='10vw';
+                    newpiccircle3.style.height='10vw';
+                    newpiccircle3.style.marginRight='5vw';
+                    newpiccircle3.style.border='2px solid';
+                    
+                    newpiccircle3.onclick=function(){
+                        bigback.style.backgroundImage='URL('+imglink.value+')';
+                        title.textContent=newtitle.value;
+                        description.textContent=newdes.value;
+                    }
+                    
+
+                }
+            }
+            
+            newimg1.onclick = function(){
+                gearbar.style.right='-100vw';
+                bigback.style.backgroundImage='URL('+newimg1.src+')';
+                title.textContent=newtitle.value;
+                description.textContent=newdes.value;
+                var newpiccircle=document.createElement('img');
+                topdiv.appendChild(newpiccircle);
+                newpiccircle.classname='img';
+                newpiccircle.src=newimg1.src;
+                newpiccircle.style.borderRadius='10vw';
+                newpiccircle.style.width='10vw';
+                newpiccircle.style.height='10vw';
+                newpiccircle.style.marginRight='5vw';
+                newpiccircle.style.border='2px solid';
+                 newpiccircle.onclick= function(){
+                    bigback.style.backgroundImage='URL('+newimg1.src+')';
+                    title.textContent=newtitle.value;
+                    description.textContent=newdes.value;
+                }
+            }
+             newimg2.onclick = function(){
+                gearbar.style.right='-100vw';
+                bigback.style.backgroundImage='URL('+newimg2.src+')';
+                title.textContent=newtitle.value;
+                description.textContent=newdes.value;
+                var newpiccircle2=document.createElement('img');
+                bottomdiv.appendChild(newpiccircle2);
+                newpiccircle2.classname='img';
+                newpiccircle2.src=newimg2.src;
+                newpiccircle2.style.borderRadius='10vw';
+                newpiccircle2.style.width='10vw';
+                newpiccircle2.style.height='10vw';
+                newpiccircle2.style.marginRight='5vw';
+                newpiccircle2.style.border='2px solid';
+                newpiccircle2.onclick= function(){
+                    bigback.style.backgroundImage='URL('+newimg2.src+')';
+                    title.textContent=newtitle.value;
+                    description.textContent=newdes.value;
+                }
+            }
+            gear.onclick = function(){
+                gearbar.style.right='0';
+            }
+            
+            image1.onclick = function(){
+                bigback.style.backgroundImage='URL('+img1.src+')';
+                title.textContent='Black Panther'
+                description.textContent="The	Black	Panther	(T'Challa)	is	a	fictional	superhero	appearing	in	American	comic	books	published	by	Marvel	Comics.	Created	by	writer-editor	Stan	Lee	and	penciller	and	co-plotter	Jack	Kirby,	he	first	appeared	in	Fantastic	Four	#52	(July	1966).	He	is	the	first	black	superhero	in	mainstream	American	comics,	debuting	years	before	such	early	African-American	superheroes	as	Marvel	Comics'	the	Falcon	(1969)	and	Luke	Cage	(1972),	and	DC	Comics'	Green	Lantern	John	Stewart	(1971),	Tyroc	(1976),	and	Black	Lightning	(1977).	The	character	is	usually	depicted	as	the	king	and	protector	of	Wakanda,	a	fictional	African	nation.	Chadwick	Boseman	portrays	the	Black	Panther	in	Captain	America:	Civil	War	(2016)	and	is	set	to	return	in	Black	Panther"
+            }
+            image2.onclick = function(){
+                bigback.style.backgroundImage='URL('+img2.src+')';
+                title.textContent='Dr. Strange'
+                description.textContent="Dr.	Stephen	Vincent	Strange,	also	known	as	Doctor	Strange,	is	a	fictional	superhero	appearing	in	American	comic	books	published	by	Marvel	Comics.	Created	by	artist	and	character	conceptualist	Steve	Ditko,	the	character	first	appeared	in	Strange	Tales	#110	(cover-dated	July	1963).	A	former	neurosurgeon,	Strange	serves	as	the	Sorcerer	Supreme,	the	primary	protector	of	Earth	against	magical	and	mystical	threats.	Debuting	in	the	Silver	Age	of	comics,	the	character	has	been	featured	in	several	comic	book	series	and	adapted	in	a	variety	of	media	including	video	games,	an	animated	television	show,	and	films.	"
+            }
+            image3.onclick = function(){
+                bigback.style.backgroundImage='URL('+img3.src+')';
+                title.textContent='She-Hulk'
+                description.textContent="She-Hulk	(Jennifer	Walters)	is	a	fictional	character	appearing	in	American	comic	books	published	by	Marvel	Comics.	Created	by	writer	Stan	Lee	and	artist	John	Buscema,	she	first	appeared	in	Savage	She-Hulk	#1	(February	1980).	A	cousin	to	Dr.	Bruce	Banner,	Walters	once	received	an	emergency	blood	transfusion	from	him	when	she	was	wounded,	which	led	to	her	acquiring	a	milder	version	of	his	Hulk	condition.	As	such,	Walters	becomes	a	large	powerful	green-hued	version	of	herself	while	still	largely	retaining	her	personality;	in	later issues her transformation is permanent"
+            }
+            image4.onclick = function(){
+                bigback.style.backgroundImage='URL('+img4.src+')';
+                title.textContent='Thor'
+                description.textContent="Thor	is	a	fictional	superhero	appearing	in	American	comic	books	published	by	Marvel	Comics.	The	character,	based	on	the	Norse	mythological	deity	of	the	same	name,	is	the	Asgardian	god	of	thunder	and	possesses	the	enchanted	hammer	Mjolnir,	which	grants	him	the	ability	of	flight	and	weather	manipulation	amongst	his	other	superhuman	attributes.	"
+            }
+            image5.onclick = function(){
+                bigback.style.backgroundImage='URL('+img5.src+')';
+                title.textContent='Iron Fist'
+                description.textContent="Iron	Fist	(Daniel	'Danny'	Rand)	is	a	fictional	superhero	appearing	in	American	comic	books	published	by	Marvel	Comics.	Created	by	Roy	Thomas	and	Gil	Kane,	Iron	Fist	first	appeared	in	Marvel	Premiere	#15	(May	1974).	The	character	is	a	practitioner	of	martial	arts	and	the	wielder	of	a	mystical	force	known	as	the	Iron	Fist,	which	allows	him	to	summon	and	focus	his	chi.	He	starred	in	his	own	solo	series	in	the	1970s,	and	shared	the	title	Power	Man	and	Iron	Fist	for	several	years	with	Luke	Cage,	partnering	with	Cage	to	form	the	superhero	team	Heroes	for	Hire.	The	character	has	starred	in	numerous	solo	titles	since,	including	The	Im"
+            }
+            image6.onclick = function(){
+                bigback.style.backgroundImage='URL('+img6.src+')';
+                title.textContent='Hawk Eye'
+                description.textContent="Hawkeye	(Clint	Barton)	is	a	fictional	superhero	appearing	in	American	comic	books	published	by	Marvel	Comics.	Created	by	writer	Stan	Lee	and	artist	Don	Heck,	the	character	first	appeared	as	a	villain	in	Tales	of	Suspense	#57	(Sept.	1964)	and	later	joined	the	Avengers"
+            }
+            image7.onclick = function(){
+                bigback.style.backgroundImage='URL('+img7.src+')';
+                title.textContent='Emma Frost'
+                description.textContent="Emma	Grace	Frost	is	a	fictional	character	appearing	in	American	comic	books	published	by	Marvel	Comics,	most	commonly	in	association	with	the	X-Men.	The	character	first	appeared	in	Uncanny	X-Men	#129	(January	1980),	and	was	created	by	writer	Chris	Claremont	and	artist/co-writer	John	Byrne.	Emma	Frost,	also	known	as	the	White	Queen,	has	evolved	from	a	supervillain	and	foe	of	the	X-men"
+            }
+            image8.onclick = function(){
+                bigback.style.backgroundImage='URL('+img8.src+')';
+                title.textContent='Nova'
+                description.textContent="Nova	(Richard	Rider)	is	a	fictional	superhero	appearing	in	American	comic	books	published	by	Marvel	Comics.	The	character	appeared	historically	as	the	star	of	his	own	series,	and	at	other	times,	as	a	supporting	character	in	team	books	such	as	The	New	Warriors.	He	is	a	member	of	the	intergalactic	police	force	known	as	the	Nova	Corps,	for	which	he	gained	superhuman	abilites."
+            }
+        </script>
+    </body>
+</html>

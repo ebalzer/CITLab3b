@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EOSSARG Page</title>
+        <link href = 'style.css' type = 'text/css' rel = 'stylesheet'/>
+    </head>
+
+    <style>
+    #base{
+            position: absolute;
+            height:125vh;
+            width:70vw;
+            margin-top:20vh;
+            margin-left: 15vw;
+            margin-right: 15vw;
+            top:0vh;
+            
+        }
+        
+        #ProductPic{
+            position: absolute;
+            margin-top: 5%;
+            height: 30%;
+            width: 55%;
+            background-color:coral;
+        }
+    
+        #ProductName{
+            position: absolute;
+            margin-top: 5%;
+            margin-left: 58%;
+            font-size: 30px;
+            color: rgb(229, 233, 255);
+            
+        }
+        
+        #ProductNum{
+            position: absolute;
+            margin-top: 8%;
+            margin-left: 58%;
+            font-size: 10px;
+            color: rgb(229, 233, 255);
+        }
+        
+        #ProductPrice{
+            position: absolute;
+            margin-top: 13%;
+            margin-left: 58%;
+            font-size: 20px;
+            color: rgb(229, 233, 255);
+        }
+        
+        #Checkerout{
+            position: absolute;
+            margin-left: 60%;
+            margin-top: 20%;
+            width: 35%;
+            height: 6%;
+            background-color: darkorange;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            outline:none;
+            
+        }
+        
+        #ProductInfo{
+            position: absolute;
+            margin-left: 58%;
+            margin-top: 29%;
+            width:35%;
+            height:32%;
+            color: rgb(229, 233, 255);
+        }
+        
+        #ReturnInfo{
+            position: absolute;
+            margin-left: 58%;
+            margin-top:58%;
+            width:35%;
+            height:32%;
+            color: rgb(229, 233, 255);
+        }
+        
+        #GlassesImage{
+            width: 100%;
+            height: 100%;
+        }
+        
+        .Infograph{
+            position: absolute;
+            margin-top: 2%;
+            width:20%;
+            height:20%;
+            cursor: pointer;
+        }
+        
+        #InfoGraphInfo{
+            position: absolute;
+            width:55%;
+            height: 30%;
+            font-family: sans-serif;
+            color: rgb(229, 233, 255);
+            margin-top: 35%;
+        }
+        
+        #Info5{
+            margin-top: 20%;
+            margin-left: 62%;
+        }
+        
+        #Info4{
+            margin-top: 26.5%;
+            margin-left: 28%;
+        }
+        
+        #Info3{
+            margin-top: 24.5%;
+            margin-left: 8%;
+        }
+        
+        #Info2{
+            margin-top:3.5%;
+            margin-left: 43%;
+        }
+        
+        #Info1{
+            margin-left: 8%;
+        }
+        #bottombuttons{
+            position: absolute;
+            bottom: -50vh;
+        }
+        
+    </style>
+    
+    
+    <body id=body>
+        
+        <div id = 'display'>
+            
+        <div id = 'head'>
+            <div id = icontop>
+                <div id= icon></div>
+                <div id= cart></div>
+            </div>
+            <div id=buttonbar>
+            <a href = 'Home.html'>
+            <button id= homebut class= buttons>Home</button>
+                </a>
+            <a href = 'Product.html'>
+            <button id= productbut class= buttons>Product</button>
+                </a>
+            <a href = 'Software.html'>
+            <button id= softbut class= buttons>Software</button>
+                </a>
+            <a href = 'aboutus.html'>
+            <button id= aboutbut class= buttons>About Us</button>
+                </a>
+            <h2 id=phonenum>Call Us at: 604-444-4566</h2>
+            </div>
+        </div>
+                <div id=bigbad>
+      
+        </div>
+        <div id = 'base'>
+            <div id = 'ProductPic'>
+                <div id = 'Info1' class = 'Infograph'></div>
+                <div id = 'Info2' class = 'Infograph'></div>
+                <div id = 'Info3' class = 'Infograph'></div>
+                <div id = 'Info4' class = 'Infograph'></div>
+                <div id = 'Info5' class = 'Infograph'></div>
+                <image src = 'https://cdn.discordapp.com/attachments/144230951990329344/255451084741410817/GlassWMarks.png' id = 'GlassesImage'></image>
+            </div>
+            <div id = 'InfoGraphInfo'></div>
+            <div id = 'ProductName'>OSSARG</div>
+            <div id = 'ProductNum'>SKU: 00109281</div>
+            <div id = 'ProductPrice'>$299.99 - Max. 1 per customer</div>
+            <button id = 'Checkerout'>Add To Cart</button>
+            <div id = 'ProductInfo'>The EOSSARG is the midrange model of OSSARG electronic headsets, offering all the capabilities of the luxury model at a more affordable price. It is compatible with Android 7.1.1 "Nougat" and later, IOS 10.2 and later, and has Bluetooth and NFC technology.</div>
+            <div id = 'ReturnInfo'>If you are not satisfied with your product, you may obtain a warranty return shipping label from our website within 30 days from the date of purchase and send the product back at no cost to you for a refund or exchange. OSSARG headsets are guaranteed to be free of fault for a period of two years from the date of purchase. If your headset develops a problem within that time period due to a manufacturing defect, contact us at assistance@ossarg.com to find out about repair or replacement options.</div>
+        </div>    
+            
+        <div id = 'foot'>
+            <div id=bottombuttons>
+                <h2 id=info>We Accept: </h2>
+                <img id=master src="visa-mastercard.png">
+                <a href='Testimonial.html'>
+                <button id=testimonials>Testimonials</button>
+                </a>
+                <a href = 'FAQ.html'>
+                <button id=faq>F.A.Q.</button>
+                </a>
+            </div>
+        </div>
+            
+        </div>
+        
+        <script>
+        
+            var info1 = document.getElementById('Info1');
+            var info2 = document.getElementById('Info2');
+            var info3 = document.getElementById('Info3');
+            var info4 = document.getElementById('Info4');
+            var info5 = document.getElementById('Info5');
+            var Glasses = document.getElementById('GlassesImage');
+            var productPic = document.getElementById('ProductPic');
+            
+            var infograph = document.getElementById('InfoGraphInfo');
+            
+            info1.onclick = function(){
+                
+                infograph.innerHTML= "<h1>High Quality Microphone</h1>\
+                <h3>Included for full phone call and voice command utility.</h3>";
+                Glasses.src = 'cl_microphone.png';
+                
+                var exitButton = document.createElement('img');
+                productPic.appendChild(exitButton);
+                exitButton.src='x.png';
+                exitButton.style.height = '50px';
+                exitButton.style.width = '50px';
+                exitButton.style.zIndex= '5';
+                exitButton.style.position='absolute';
+                exitButton.style.right='0';
+                exitButton.style.top='0';
+                exitButton.style.cursor='pointer';
+                
+                exitButton.onclick = function(){
+                    Glasses.src = 'https://cdn.discordapp.com/attachments/144230951990329344/255451084741410817/GlassWMarks.png';
+                    productPic.removeChild(exitButton);
+                }
+
+            }
+            info2.onclick = function(){
+                
+                infograph.innerHTML="<h1>Bone Resonance Headphones</h1>\
+                <h3>Bone resonance headphones provide a high quality listening experience while allowing the user to hear what's\
+                going on around them.</h3>";
+                Glasses.src='cl_headphones.png';
+                
+                var exitButton = document.createElement('img');
+                productPic.appendChild(exitButton);
+                exitButton.src='x.png';
+                exitButton.style.height = '50px';
+                exitButton.style.width = '50px';
+                exitButton.style.zIndex= '5';
+                exitButton.style.position='absolute';
+                exitButton.style.right='0';
+                exitButton.style.top='0';
+                exitButton.style.cursor='pointer';
+                
+                exitButton.onclick = function(){
+                    Glasses.src = 'https://cdn.discordapp.com/attachments/144230951990329344/255451084741410817/GlassWMarks.png';
+                    productPic.removeChild(exitButton);
+                }
+
+            }
+            info3.onclick = function(){
+                
+                infograph.innerHTML="<h1>Ergonomically Molded Support Padding</h1>\
+                <h3>Ensures the most comfortable all-day wear possible.</h3>";
+                Glasses.src = 'cl_support.png';
+                
+                var exitButton = document.createElement('img');
+                productPic.appendChild(exitButton);
+                exitButton.src='x.png';
+                exitButton.style.height = '50px';
+                exitButton.style.width = '50px';
+                exitButton.style.zIndex= '5';
+                exitButton.style.position='absolute';
+                exitButton.style.right='0';
+                exitButton.style.top='0';
+                exitButton.style.cursor='pointer';
+                
+                exitButton.onclick = function(){
+                    Glasses.src = 'https://cdn.discordapp.com/attachments/144230951990329344/255451084741410817/GlassWMarks.png';
+                    productPic.removeChild(exitButton);
+                }
+
+            }
+            info4.onclick = function(){
+                
+                infograph.innerHTML="<h1>Electric Glass Lenses</h1>\
+                <h3>Offer high resolution display with low power consumption.</h3>";
+                Glasses.src = 'cl_lens.png';
+                
+                var exitButton = document.createElement('img');
+                productPic.appendChild(exitButton);
+                exitButton.src='x.png';
+                exitButton.style.height = '50px';
+                exitButton.style.width = '50px';
+                exitButton.style.zIndex= '5';
+                exitButton.style.position='absolute';
+                exitButton.style.right='0';
+                exitButton.style.top='0';
+                exitButton.style.cursor='pointer';
+                
+                exitButton.onclick = function(){
+                    Glasses.src = 'https://cdn.discordapp.com/attachments/144230951990329344/255451084741410817/GlassWMarks.png';
+                    productPic.removeChild(exitButton);
+                }
+
+            }
+            info5.onclick = function(){
+                
+                infograph.innerHTML="<h1>Micro SD Card Slot</h1>\
+                <h3>Allows for vast memory expansion as needed.</h3>";
+                Glasses.src = 'cl_sd.png';
+                
+                var exitButton = document.createElement('img');
+                productPic.appendChild(exitButton);
+                exitButton.src='x.png';
+                exitButton.style.height = '50px';
+                exitButton.style.width = '50px';
+                exitButton.style.zIndex= '5';
+                exitButton.style.position='absolute';
+                exitButton.style.right='0';
+                exitButton.style.top='0';
+                exitButton.style.cursor='pointer';
+                
+                exitButton.onclick = function(){
+                    Glasses.src = 'https://cdn.discordapp.com/attachments/144230951990329344/255451084741410817/GlassWMarks.png';
+                    productPic.removeChild(exitButton);
+                }
+
+            }
+        
+        </script>
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src = 'webpj.js'></script>
+        <script>
+
+        </script>
+    </body>
+
+
+</html>
